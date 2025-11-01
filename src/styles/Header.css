@@ -1,0 +1,115 @@
+/* Header.css */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #3e2f2f; /* castanho escuro */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Logo */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #f5f5dc; /* bege claro */
+  text-decoration: none;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  transition: transform 0.2s;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+}
+
+.navbar-logo svg {
+  margin-right: 10px;
+  font-size: 2rem;
+  color: #f5f5dc;
+}
+
+/* Menu */
+.navbar-menu {
+  display: flex;
+  gap: 25px;
+}
+
+.navbar-menu a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.navbar-menu a:hover {
+  color: #d32f2f; /* vermelho discreto */
+  transform: scale(1.05);
+}
+
+/* Botão Pedido */
+.navbar-menu .btn-pedido {
+  background-color: #d32f2f; /* vermelho */
+  color: #ffffff;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.navbar-menu .btn-pedido:hover {
+  background-color: #b71c1c; /* vermelho mais escuro */
+  transform: scale(1.05);
+}
+
+/* Toggle Mobile */
+.navbar-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.navbar-toggle span {
+  width: 28px;
+  height: 3px;
+  background-color: #ffffff;
+  display: block;
+  border-radius: 2px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .navbar-menu {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #3e2f2f; /* castanho escuro */
+    flex-direction: column;
+    width: 220px;
+    display: none;
+    padding: 15px;
+    border-radius: 8px;
+    gap: 15px;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: flex;
+  }
+
+  .navbar-menu a,
+  .navbar-menu .btn-pedido {
+    text-align: center;
+  }
+}
