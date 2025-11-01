@@ -52,27 +52,30 @@ function Shop() {
 
   return (
     <div>
-      {/* Carrinho */}
+      {/* Carrinho Modal */}
       {showCart && (
-        <div className="cart-container">
-          <h2>Meu Carrinho</h2>
-          {cart.length === 0 ? (
-            <p>Seu carrinho está vazio.</p>
-          ) : (
-            <div className="cart-items">
-              {cart.map((item) => (
-                <div className="cart-item" key={item.id}>
-                  <img src={item.img} alt={item.name} />
-                  <div className="cart-info">
-                    <h3>{item.name}</h3>
-                    <p>Quantidade: {item.quantity}</p>
-                    <p>Preço: {item.price * item.quantity} AOA</p>
+        <div className={`cart-modal-overlay ${showCart ? "show" : ""}`}>
+          <div className="cart-container">
+            <button className="cart-close-btn" onClick={() => setShowCart(false)}>×</button>
+            <h2>Meu Carrinho</h2>
+            {cart.length === 0 ? (
+              <p>Seu carrinho está vazio.</p>
+            ) : (
+              <div className="cart-items">
+                {cart.map((item) => (
+                  <div className="cart-item" key={item.id}>
+                    <img src={item.img} alt={item.name} />
+                    <div className="cart-info">
+                      <h3>{item.name}</h3>
+                      <p>Quantidade: {item.quantity}</p>
+                      <p>Preço: {item.price * item.quantity} AOA</p>
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
-          )}
-          <h3>Total: {total} AOA</h3>
+                ))}
+              </div>
+            )}
+            <h3>Total: {total} AOA</h3>
+          </div>
         </div>
       )}
 
