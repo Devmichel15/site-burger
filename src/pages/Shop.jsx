@@ -68,13 +68,13 @@ function Shop() {
                     <div className="cart-info">
                       <h3>{item.name}</h3>
                       <p>Quantidade: {item.quantity}</p>
-                      <p>Preço: {item.price * item.quantity} AOA</p>
+                      <p>Preço: {item.price * item.quantity} kzs</p>
                     </div>
                   </div>
                 ))}
               </div>
             )}
-            <h3>Total: {total} AOA</h3>
+            <h3>Total: {total} kzs</h3>
           </div>
         </div>
       )}
@@ -88,7 +88,7 @@ function Shop() {
               <img src={product.img} alt={product.name} />
               <h3>{product.name}</h3>
               <p>{product.description}</p>
-              <p className="price">{product.price} AOA</p>
+              <p className="price">{product.price} kzs</p>
               <button className="btn-add" onClick={() => addToCart(product)}>
                 Adicionar
               </button>

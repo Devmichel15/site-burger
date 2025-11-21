@@ -1,10 +1,10 @@
-import { GiHamburger } from "react-icons/gi";
+import { BiCoffee } from "react-icons/bi";
 
 import "../styles/home.css";
 
-import burger1 from  "../assets/burger1.png";
-import burger2 from  "../assets/burger2.jpg";
-import burger3 from  "../assets/burger3.jpg";
+import burger1 from "../assets/burger1.png";
+import burger2 from "../assets/burger2.jpg";
+import burger3 from "../assets/burger3.jpg";
 
 function Home() {
   return (
@@ -13,10 +13,19 @@ function Home() {
       <section className="hero">
         <div className="hero-content">
           <h1>
-            Bem-vindo ao Puro Sabor <GiHamburger style={{ marginLeft: "10px" }} />
+            Bem-vindo ao Kadosh Café{" "}
+            <BiCoffee style={{ marginLeft: "10px" }} />
           </h1>
           <p>O melhor sabor, rápido e irresistível!</p>
-          <button className="btn-hero">Faça seu Pedido</button>
+          <button className="btn-hero">
+            <a
+              href="https://wa.me/244929892233?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20no%20Água%20na%20Boca."
+              target="_blank"
+              class="btn-pedido"
+            >
+              Fazer Pedido
+            </a>
+          </button>
         </div>
       </section>
 
@@ -44,9 +53,10 @@ function Home() {
 
       {/* Seção Sobre / Destaques */}
       <section className="about">
-        <h2>Por que escolher o Puro Gosto?</h2>
+        <h2>Por que escolher a Kadosh Café?</h2>
         <p>
-          Ingredientes frescos, atendimento rápido e o sabor que conquista qualquer cliente.
+          Ingredientes frescos, atendimento rápido e o sabor que conquista
+          qualquer cliente.
         </p>
       </section>
     </div>

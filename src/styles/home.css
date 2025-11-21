@@ -1,4 +1,8 @@
 /* Hero / Banner */
+a{
+  text-decoration: none;
+  color: white;
+}
 .hero {
   background-image: url('../assets/bg.jpg');
   background-position: center center;
