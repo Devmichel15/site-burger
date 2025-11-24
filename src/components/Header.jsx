@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { BiCoffee } from "react-icons/bi";
+import { GiHamburger } from "react-icons/gi";
 
 import "../styles/Header.css";
 
@@ -11,8 +11,8 @@ function Header() {
     <nav className="navbar">
       {/* Logo */}
       <a className="navbar-logo" href="#">
-        <BiCoffee />
-        Kadosh Café
+        <GiHamburger />
+        Puro gosto
       </a>
 
       {/* Toggle Mobile */}
